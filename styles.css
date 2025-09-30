@@ -36,11 +36,12 @@ body {
 }
 /* video */
 .video {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
     text-align: center;
 }
 .video-title {
-    text-align: center;
-    padding-bottom : 5%;
+    padding: 8rem 0 4rem;
+    margin-top: 80px;
 }
 /* Focus styles */
 *:focus {
