@@ -34,7 +34,14 @@ body {
 .skip-link:focus {
     top: 6px;
 }
-
+/* video */
+.video {
+    text-align: center;
+}
+.video-title {
+    text-align: center;
+    padding-bottom : 5%;
+}
 /* Focus styles */
 *:focus {
     outline: 3px solid #4a90e2;
