@@ -35,14 +35,18 @@ body {
     top: 6px;
 }
 /* video */
+
+.video-title {
+    width: 50%;
+    margin: 80px auto 0;
+    text-align: center;
+}
+
 .video {
     background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
     text-align: center;
 }
-.video-title {
-    padding: 8rem 0 4rem;
-    margin-top: 80px;
-}
+
 /* Focus styles */
 *:focus {
     outline: 3px solid #4a90e2;
