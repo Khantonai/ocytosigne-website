@@ -163,9 +163,9 @@ h1 {
     margin-bottom: 12px;
 }
 
-.praticiens-section .praticien-header img {
-    width: 60px;
-    height: 60px;
+.praticiens-section .praticien-header img, .praticien-media video {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
 }

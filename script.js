@@ -86,21 +86,27 @@ practitioners.forEach((p, index) => {
     card.className = "praticien-card";
     card.innerHTML = `
       <div class="praticien-header">
-        <img src="${p.image}" alt="${p.name}" />
+        <div class="praticien-media">
+          ${
+            p.video
+              ? `<video
+                    src="${p.video}"
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="${p.image || 'https://via.placeholder.com/300x300?text=Profil'}"
+                    aria-label="Présentation vidéo de ${p.name}"></video>`
+              : `<img
+                    src="${p.image || 'https://via.placeholder.com/300x300?text=Profil'}"
+                    alt="${p.name}" />`
+          }
+        </div>
         <div class="praticien-info">
+        <p>${p.specialty}</p>
           <h3>${p.name}</h3>
-          ${p.video
-            ? `<video class="praticien-video"
-                       src="${p.video}"
-                       controls
-                       muted
-                       autoplay
-                       loop
-                       playsinline
-                       preload="metadata"
-                       poster="${p.image}"
-                       aria-label="Présentation vidéo de ${p.name}"></video>`
-            : `<p>${p.specialty}</p>`}
+          <!-- Vidéo déplacée dans le cadre gauche. -->
           <p style="color:#e65100; font-weight:600;">${p.lsfLevel}</p>
         </div>
       </div>
