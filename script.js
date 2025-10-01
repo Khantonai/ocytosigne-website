@@ -5,6 +5,8 @@ const practitioners = [
     {
         name: "Dr. Marie Dubois",
         specialty: "Médecin généraliste",
+        // Ajoutez le chemin de votre vidéo téléchargée (ex: dossier /videos)
+        video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/00009-3.mp4",
         rating: 4.9,
         reviews: 127,
         location: "Paris 11ème",
@@ -16,6 +18,7 @@ const practitioners = [
     {
         name: "Dr. Thomas Martin",
         specialty: "Psychologue",
+        video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/psychologue_adjetn_1_2.mp4", 
         rating: 4.8,
         reviews: 89,
         location: "Lyon 3ème",
@@ -27,17 +30,19 @@ const practitioners = [
     {
         name: "Dr. Sophie Leroy",
         specialty: "Dermatologue",
+        video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/dermatologue_nm_1_1.mp4", 
         rating: 4.9,
         reviews: 156,
         location: "Marseille 1er",
         availability: "Lundi 9h",
         lsfLevel: "LSF Expert",
-        image: "https://images.unsplash.com/photo-1594824881270-3e5dcf6fb1d4?w=300&h=300&fit=crop&crop=face",
+        image: null,
         badges: ["LSF", "Téléconsultation"],
     },
     {
         name: "Dr. Ahmed Benali",
         specialty: "Cardiologue",
+        video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/cardiologue_nm_1_1.mp4",
         rating: 4.7,
         reviews: 203,
         location: "Toulouse Centre",
@@ -49,6 +54,7 @@ const practitioners = [
     {
         name: "Dr. Claire Moreau",
         specialty: "Pédiatre",
+        video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/pediatre_nm_1_2.mp4", 
         rating: 4.9,
         reviews: 174,
         location: "Nantes Sud",
@@ -60,7 +66,7 @@ const practitioners = [
     {
         name: "Dr. Paul Rousseau",
         specialty: "Kinésithérapeute",
-        rating: 4.8,
+        video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/kinesitherapeute_nm_1_1.mp4", 
         reviews: 92,
         location: "Bordeaux Centre",
         availability: "Vendredi 10h",
@@ -83,7 +89,18 @@ practitioners.forEach((p, index) => {
         <img src="${p.image}" alt="${p.name}" />
         <div class="praticien-info">
           <h3>${p.name}</h3>
-          <p>${p.specialty}</p>
+          ${p.video
+            ? `<video class="praticien-video"
+                       src="${p.video}"
+                       controls
+                       muted
+                       autoplay
+                       loop
+                       playsinline
+                       preload="metadata"
+                       poster="${p.image}"
+                       aria-label="Présentation vidéo de ${p.name}"></video>`
+            : `<p>${p.specialty}</p>`}
           <p style="color:#e65100; font-weight:600;">${p.lsfLevel}</p>
         </div>
       </div>
