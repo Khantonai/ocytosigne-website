@@ -17,6 +17,11 @@ body {
     background-color: #ffffff;
 }
 
+main {
+    margin-top: 80px;
+    padding: 0 1rem;
+}
+
 /* Accessibility */
 .skip-link {
     position: absolute;
@@ -50,7 +55,12 @@ select:focus {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     margin-bottom: 1rem;
     color: #1a202c;
@@ -746,8 +756,91 @@ body.large-text .btn {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
+
     html {
         scroll-behavior: auto;
     }
+}
+
+#how {
+    text-align: center;
+}
+
+#how .card-cont {
+    position: relative;
+}
+
+#how .connector {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0.125rem;
+    background: #0a5fa9;
+    z-index: -1;
+    top: calc(2rem + 32px - (0.125rem /2));
+
+}
+
+.how-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+.how-card>li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    border: solid 1px #e2e8f0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 2rem;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.how-card .icon-cont {
+    background: linear-gradient(135deg, hsl(208 89% 35%), hsl(142 76% 36%));
+    border-radius: 1rem;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-card .icon-cont svg {
+    color: #FFFFFF;
+}
+
+.how-card ul li {
+    text-align: left;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.how-card .text-cont h3 {
+    margin-bottom: 1rem;
+    color: #1a202c;
+}
+
+.how-card .number {
+    background-color: #f97015;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
 }

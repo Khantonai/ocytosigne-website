@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ocytosigne - Connecting healthcare professionals and patients with hearing loss through accessible communication technology">
+    <meta name="description"
+        content="Ocytosigne - Connecting healthcare professionals and patients with hearing loss through accessible communication technology">
     <meta name="keywords" content="healthcare, hearing loss, accessibility, communication, sign language, medical">
     <title>Ocytosigne - Bridging Healthcare Communication</title>
     <link rel="stylesheet" href="styles.css">
@@ -11,10 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Skip to content link for screen readers -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <!-- Header -->
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -40,187 +43,95 @@
     <!-- Main Content -->
     <main id="main-content" role="main">
         <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 id="hero-title" class="hero-title">
-                        Breaking Down Communication Barriers in Healthcare
-                    </h1>
-                    <p class="hero-description">
-                        Ocytosigne connects healthcare professionals and patients with hearing loss through 
-                        innovative, accessible communication technology. Experience seamless medical consultations 
-                        with real-time sign language interpretation and visual communication tools.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary" id="learn-more-btn">Learn More</button>
-                        <button class="btn btn-secondary" id="demo-btn">Request Demo</button>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="visual-placeholder">
-                        <div class="visual-icon">👩‍⚕️</div>
-                        <div class="connection-line"></div>
-                        <div class="visual-icon">🤟</div>
-                        <div class="connection-line"></div>
-                        <div class="visual-icon">👨‍🦱</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section id="how">
+            <h2>Comment ça marche ?</h2>
+            <p>Un processus simple en 3 étapes pour accéder à des soins de qualité en toute accessibilité</p>
+            <div class="card-cont">
+                <span class="connector"></span>
+                <ol class="how-card">
+                    <li>
+                        <div class="icon-cont">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-search h-8 w-8 text-white"
+                                data-lov-id="src/components/ProcessSection.tsx:72:18" data-lov-name="step.icon"
+                                data-component-path="src/components/ProcessSection.tsx" data-component-line="72"
+                                data-component-file="ProcessSection.tsx" data-component-name="step.icon"
+                                data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-white%22%7D"
+                                aria-hidden="true" focusable="false">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </svg>
+                        </div>
+                        <div class="text-cont">
+                            <h3>1. Trouvez votre praticien</h3>
+                            <p>Recherchez parmi nos professionnels certifiés LSF selon vos besoins spécifiques</p>
+                            <ul>
+                                <li>Filtres par spécialité</li>
+                                <li>Géolocalisation</li>
+                                <li>Disponibilités en temps réel</li>
+                                <li>Profils détaillés avec vidéos LSF</li>
+                            </ul>
+                        </div>
+                        <span class="number">1</span>
+                    </li>
+                    <li>
+                        <div class="icon-cont">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-calendar h-8 w-8 text-white"
+                                data-lov-id="src/components/ProcessSection.tsx:72:18" data-lov-name="step.icon"
+                                data-component-path="src/components/ProcessSection.tsx" data-component-line="72"
+                                data-component-file="ProcessSection.tsx" data-component-name="step.icon"
+                                data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-white%22%7D">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg>
+                        </div>
+                        <div class="text-cont">
+                            <h3>2. Réservez en un clic</h3>
+                            <p>Prenez rendez-vous directement en ligne avec confirmation immédiate</p>
+                            <ul>
+                                <li>Planning en temps réel</li>
+                                <li>Confirmation instantanée</li>
+                                <li>Rappels automatiques</li>
+                                <li>Interface 100% accessible</li>
+                            </ul>
+                        </div>
+                        <span class="number">2</span>
+                    </li>
 
-        <!-- Features Section -->
-        <section id="features" class="features" aria-labelledby="features-title">
-            <div class="container">
-                <h2 id="features-title" class="section-title">Key Features</h2>
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🤝</div>
-                        <h3 class="feature-title">Real-Time Communication</h3>
-                        <p class="feature-description">
-                            Instant sign language interpretation and visual communication tools 
-                            for seamless patient-provider interactions.
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">♿</div>
-                        <h3 class="feature-title">Full Accessibility</h3>
-                        <p class="feature-description">
-                            Designed from the ground up with accessibility standards, 
-                            ensuring equal access to healthcare for all.
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🔒</div>
-                        <h3 class="feature-title">HIPAA Compliant</h3>
-                        <p class="feature-description">
-                            Secure, encrypted communication that meets all healthcare 
-                            privacy and security requirements.
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">📱</div>
-                        <h3 class="feature-title">Multi-Platform</h3>
-                        <p class="feature-description">
-                            Available on desktop, tablet, and mobile devices for 
-                            communication anywhere, anytime.
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">⚡</div>
-                        <h3 class="feature-title">Fast & Reliable</h3>
-                        <p class="feature-description">
-                            Low-latency communication with 99.9% uptime to ensure 
-                            critical healthcare conversations never drop.
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🎯</div>
-                        <h3 class="feature-title">User-Centered Design</h3>
-                        <p class="feature-description">
-                            Intuitive interface designed with input from healthcare 
-                            professionals and hearing-impaired patients.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
+                    <li>
+                        <div class="icon-cont">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-calendar h-8 w-8 text-white"
+                                data-lov-id="src/components/ProcessSection.tsx:72:18" data-lov-name="step.icon"
+                                data-component-path="src/components/ProcessSection.tsx" data-component-line="72"
+                                data-component-file="ProcessSection.tsx" data-component-name="step.icon"
+                                data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-white%22%7D">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg>
+                        </div>
+                        <div class="text-cont">
+                            <h3>3. Consultation accessible</h3>
+                            <p>Consultez votre praticien via notre plateforme optimisée pour la LSF</p>
+                            <ul>
+                                <li>Vidéo haute qualité</li>
+                                <li>Interprète LSF si besoin</li>
+                                <li>Chat écrit intégré</li>
+                                <li>Suivi post-consultation</li>
+                            </ul>
+                        </div>
+                        <span class="number">3</span>
+                    </li>
 
-        <!-- About Section -->
-        <section id="about" class="about" aria-labelledby="about-title">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2 id="about-title" class="section-title">About Ocytosigne</h2>
-                        <p class="about-description">
-                            Healthcare communication should be accessible to everyone. Ocytosigne was born 
-                            from the understanding that hearing-impaired patients often face significant 
-                            barriers when seeking medical care.
-                        </p>
-                        <p class="about-description">
-                            Our platform bridges this gap by providing healthcare professionals and patients 
-                            with innovative tools for clear, effective communication. Through real-time sign 
-                            language interpretation, visual aids, and accessible interface design, we ensure 
-                            that every patient receives the care they deserve.
-                        </p>
-                        <div class="stats">
-                            <div class="stat">
-                                <div class="stat-number">500K+</div>
-                                <div class="stat-label">Patients Served</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">1,200+</div>
-                                <div class="stat-label">Healthcare Providers</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">99.9%</div>
-                                <div class="stat-label">Uptime</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-visual">
-                        <div class="about-image-placeholder">
-                            <div class="placeholder-text">Healthcare Professional & Patient Communication</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact" aria-labelledby="contact-title">
-            <div class="container">
-                <h2 id="contact-title" class="section-title">Get Started Today</h2>
-                <p class="contact-description">
-                    Ready to improve healthcare communication accessibility? Contact us to learn more 
-                    about implementing Ocytosigne in your healthcare facility.
-                </p>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">📧</div>
-                            <div>
-                                <h3>Email Us</h3>
-                                <p>info@ocytosigne.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">📞</div>
-                            <div>
-                                <h3>Call Us</h3>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">💬</div>
-                            <div>
-                                <h3>Live Chat</h3>
-                                <p>Available 24/7 with ASL support</p>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="contact-form" id="contact-form" aria-labelledby="contact-title">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name *</label>
-                            <input type="text" id="name" name="name" class="form-input" required aria-describedby="name-error">
-                            <div id="name-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email *</label>
-                            <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
-                            <div id="email-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="organization" class="form-label">Healthcare Organization</label>
-                            <input type="text" id="organization" name="organization" class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="4" required aria-describedby="message-error"></textarea>
-                            <div id="message-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
-                </div>
+                </ol>
             </div>
         </section>
     </main>
@@ -260,4 +171,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
