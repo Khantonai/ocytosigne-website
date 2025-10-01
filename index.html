@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Ocytosigne - Connecting healthcare professionals and patients with hearing loss through accessible communication technology">
+    <meta name="description" content="Ocytosigne - Connecting healthcare professionals and patients with hearing loss through accessible communication technology">
     <meta name="keywords" content="healthcare, hearing loss, accessibility, communication, sign language, medical">
     <title>Ocytosigne - Bridging Healthcare Communication</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-
 <body>
-    <!-- Skip to content link for screen readers -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-    <!-- Header -->
     <header class="header" role="banner">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <div class="logo">
-                    <h1 class="logo-text">Ocytosigne</h1>
-                    <span class="logo-tagline">Healthcare Communication</span>
+        <nav class="nav" aria-label="Navigation principale">
+            <div class="nav-mobile">
+                <div class="nav-left">
+                    <img src="img/logo.png" alt="Logo Ocytosigne" class="nav-logo" />
+                    <div class="nav-titles">
+                        <span class="nav-title-top">SantéAccess</span>
+                        <span class="nav-title-bottom">accessibilité à tous</span>
+                    </div>
                 </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#home" class="nav-link">Accueil</a></li>
-                    <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
+                <button class="nav-login" id="nav-login" aria-label="Connexion">
+                    <span class="login-icon"><img src="img/profile.png" alt="Logo Ocytosigne" class="nav-logo" /></span>
+                    <span class="login-text">Connexion</span>
+                </button>
+                <button class="nav-urg" id="nav-urg" aria-label="Urgence 24h">
+                    <span class="urg-icon"><img src="img/phone.png" alt="Téléphone Urgence" class="nav-logo" /></span>
+                    <span class="urg-text">Urgence 24h</span>
+                </button>
+                <button class="nav-burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
                 </button>
             </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#patients" class="nav-link">Patients</a></li>
+                <li><a href="#praticien" class="nav-link">Praticien</a></li>
+                <li><a href="#accessibilite" class="nav-link">Accessibilité</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -143,7 +151,9 @@
                         </div>
                         <span class="number">3</span>
                     </li>
-                    
+                </ol>
+            </div>
+
 
         </section>
 
@@ -225,7 +235,59 @@
                 <button class="cta-btn">Voir tous les praticiens</button>
             </div>
         </section>
-        <script src="script.js"></script>
+    </main>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="Logo Ocytosigne" class="footer-logo" />
+                <div class="footer-titles">
+                    <span class="footer-title-top">SantéAccess</span>
+                    <span class="footer-title-bottom">accessibilité à tous</span>
+                </div>
+            </div>
+            <div class="footer-desc">
+                Ocytosigne facilite la communication entre patients et professionnels de santé grâce à des solutions accessibles et inclusives pour tous.
+            </div>
+            <div class="footer-icons">
+                <span class="footer-icon-block">
+                    <img src="img/logo.png" alt="LSF" class="footer-icon" />
+                    <span>100% LSF</span>
+                </span>
+                <span class="footer-icon-block">
+                    <img src="img/logo.png" alt="LSF" class="footer-icon" />
+                    <span>100% LSF</span>
+                </span>
+            </div>
+        </div>
+        <div class="footer-nav-section">
+            <h3 class="footer-nav-title">Navigation</h3>
+            <ul class="footer-nav-list">
+                <li><a href="/" class="footer-link">Revenir à l'accueil</a></li>
+                <li><a href="#fonctionnement" class="footer-link">Comment ça marche</a></li>
+                <li><a href="#praticiens" class="footer-link">Praticiens</a></li>
+                <li><a href="#accessibilite" class="footer-link">Accessibilité</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3 class="footer-contact-title">Contact</h3>
+            <ul class="footer-contact-list">
+                <li><span class="footer-contact-icon"><img src="img/phone-orange.png" alt="Logo Ocytosigne" class="nav-logo" /></span> <a href="tel:0123456789">01 23 45 67 89</a></li>
+                <li><span class="footer-contact-icon"><img src="img/mail.png" alt="Logo Ocytosigne" class="nav-logo" /></span> <a href="mailto:contact@ocytosigne.com">contact@ocytosigne.com</a></li>
+                <li><span class="footer-contact-icon"><img src="img/map.png" alt="Logo Ocytosigne" class="nav-logo" /></span> 12 rue de la Santé, 75000 Paris</li>
+            </ul>
+        </div>
+        <div class="footer-urgency">
+            <h3 class="footer-urgency-title">Urgence médicale</h3>
+            <div class="footer-urgency-desc">Accès prioritaire disponible 24h/24h pour toute urgence médicale.</div>
+            <button class="footer-urgency-btn">Urgence</button>
+        </div>
+        <div class="footer-legal">
+            <span>© 2025 Ocytosigne. Tous droits réservés.</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="header.js"></script>
+
 </body>
 
 </html>
