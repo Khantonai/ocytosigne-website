@@ -17,55 +17,68 @@
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="nav" aria-label="Navigation principale">
+        <nav id="primary-navigation" class="nav" aria-label="Navigation principale">
             <div class="nav-mobile">
-                <div class="nav-left">
+                <div class="nav-left" aria-label="Identité du site">
                     <img src="img/logo.png" alt="Logo Ocytosigne" class="nav-logo" />
-                    <div class="nav-titles">
+                    <div class="nav-titles" aria-hidden="false">
                         <span class="nav-title-top">SantéAccess</span>
                         <span class="nav-title-bottom">accessibilité à tous</span>
                     </div>
                 </div>
-                <button class="nav-login" id="nav-login" aria-label="Connexion">
-                    <span class="login-icon"><img src="img/profile.png" alt="Logo Ocytosigne" class="nav-logo" /></span>
+
+                <button class="nav-login" id="nav-login" aria-label="Se connecter">
+                    <span class="login-icon">
+                        <img src="img/profile.png" alt="" aria-hidden="true" class="nav-logo" />
+                    </span>
                     <span class="login-text">Connexion</span>
                 </button>
+
                 <button class="nav-urg" id="nav-urg" aria-label="Urgence 24h">
-                    <span class="urg-icon"><img src="img/phone.png" alt="Téléphone Urgence" class="nav-logo" /></span>
+                    <span class="urg-icon">
+                        <img src="img/phone.png" alt="" aria-hidden="true" class="nav-logo" />
+                    </span>
                     <span class="urg-text">Urgence 24h</span>
                 </button>
-                <button class="nav-burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span class="burger-bar"></span>
-                    <span class="burger-bar"></span>
-                    <span class="burger-bar"></span>
+
+                <button
+                    class="nav-burger"
+                    id="nav-burger"
+                    aria-label="Ouvrir le menu"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                >
+                    <span class="burger-bar" aria-hidden="true"></span>
+                    <span class="burger-bar" aria-hidden="true"></span>
+                    <span class="burger-bar" aria-hidden="true"></span>
                 </button>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#patients" class="nav-link">Patients</a></li>
-                <li><a href="#praticien" class="nav-link">Praticien</a></li>
-                <li><a href="#accessibilite" class="nav-link">Accessibilité</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#apropos" class="nav-link">À propos</a></li>
+
+            <ul class="nav-menu" id="nav-menu" role="list" aria-label="Liens principaux">
+                <li role="listitem"><a href="#patients" class="nav-link">Patients</a></li>
+                <li role="listitem"><a href="#praticien" class="nav-link">Praticien</a></li>
+                <li role="listitem"><a href="#accessibilite" class="nav-link">Accessibilité</a></li>
+                <li role="listitem"><a href="#contact" class="nav-link">Contact</a></li>
+                <li role="listitem"><a href="#apropos" class="nav-link">À propos</a></li>
             </ul>
         </nav>
     </header>
 
-
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-        <!-- Video Section -->
-        <section id="home" class="video">
-            <h1 class="video-title">Une plateforme de santé accessible aux sourds et malentendants</h1>
+    <main id="main-content" role="main" tabindex="-1">
+        <!-- Section vidéo -->
+        <section id="home" class="video" role="region" aria-labelledby="home-title">
+            <h1 class="video-title" id="home-title">Une plateforme de santé accessible aux sourds et malentendants</h1>
             <div class="video">
-                <video controls>
+                <video controls aria-label="Vidéo de présentation en LSF">
                     <source src="img/bonjour_LSF.mp4" type="video/mp4">
                     <p>Votre navigateur ne supporte pas la balise vidéo HTML5.</p>
                 </video>
             </div>
         </section>
-        <!-- Hero Section -->
-        <section id="how">
-            <h2>Comment ça marche ?</h2>
+
+        <!-- Comment ça marche -->
+        <section id="how" role="region" aria-labelledby="how-title">
+            <h2 id="how-title">Comment ça marche ?</h2>
             <p>Un processus simple en 3 étapes pour accéder à des soins de qualité en toute accessibilité</p>
             <div class="card-cont">
                 <span class="connector"></span>
@@ -158,9 +171,9 @@
         </section>
 
         <!-- Section praticiens -->
-        <section id="praticiens" class="praticiens-section">
+        <section id="praticiens" class="praticiens-section" role="region" aria-labelledby="praticiens-title">
             <div class="section-header">
-                <h2>Nos praticiens certifiés</h2>
+                <h2 id="praticiens-title">Nos praticiens certifiés</h2>
                 <p>
                     Tous nos professionnels de santé sont formés et certifiés en Langue des Signes Française
                 </p>
@@ -178,18 +191,26 @@
             <div class="praticiens-grid" id="praticiensGrid"></div>
 
             <!-- Fenêtre modale de prise de rendez-vous -->
-            <div class="modal" id="rdv-modal">
+            <div
+                class="modal"
+                id="rdv-modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-praticien-name"
+                aria-describedby="rdv-modal-desc"
+            >
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <button type="button" class="close" aria-label="Fermer la fenêtre">&times;</button>
 
-                    <!-- Header praticien -->
+                    <p id="rdv-modal-desc" class="sr-only">Fenêtre de prise de rendez-vous avec informations du praticien et sélection d’options.</p>
+
                     <div class="modal-praticien">
-                        <img src="images/marie-dubois.jpg" alt="Dr. Marie Dubois">
+                        <img src="images/marie-dubois.jpg" alt="Portrait du praticien">
                         <div>
                             <h3 id="modal-praticien-name">Dr. Marie Dubois</h3>
                             <p>Médecin généraliste – Paris 15ème</p>
-                            <span class="badge">LSF</span>
-                            <span class="badge">Sous-titres</span>
+                            <span class="badge" aria-label="Communication en LSF">LSF</span>
+                            <span class="badge" aria-label="Sous-titres disponibles">Sous-titres</span>
                         </div>
                     </div>
 
@@ -236,8 +257,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-top">
+    <footer class="footer" role="contentinfo" aria-label="Pied de page">
+        <div class="footer-top" role="region" aria-label="Présentation">
             <div class="footer-brand">
                 <img src="img/logo.png" alt="Logo Ocytosigne" class="footer-logo" />
                 <div class="footer-titles">
@@ -248,46 +269,64 @@
             <div class="footer-desc">
                 Ocytosigne facilite la communication entre patients et professionnels de santé grâce à des solutions accessibles et inclusives pour tous.
             </div>
-            <div class="footer-icons">
-                <span class="footer-icon-block">
-                    <img src="img/logo.png" alt="LSF" class="footer-icon" />
+            <div class="footer-icons" aria-label="Engagements">
+                <span class="footer-icon-block" role="img" aria-label="Service 100% LSF">
+                    <img src="img/logo.png" alt="" aria-hidden="true" class="footer-icon" />
                     <span>100% LSF</span>
                 </span>
-                <span class="footer-icon-block">
-                    <img src="img/logo.png" alt="LSF" class="footer-icon" />
+                <span class="footer-icon-block" role="img" aria-label="Service 100% LSF">
+                    <img src="img/logo.png" alt="" aria-hidden="true" class="footer-icon" />
                     <span>100% LSF</span>
                 </span>
             </div>
         </div>
-        <div class="footer-nav-section">
+
+        <nav class="footer-nav-section" aria-label="Navigation de pied de page">
             <h3 class="footer-nav-title">Navigation</h3>
-            <ul class="footer-nav-list">
-                <li><a href="#home" class="footer-link">Revenir à l'accueil</a></li>
-                <li><a href="#how" class="footer-link">Comment ça marche</a></li>
-                <li><a href="#praticiens" class="footer-link">Praticiens</a></li>
-                <li><a href="#accessibilite" class="footer-link">Accessibilité</a></li>
+            <ul class="footer-nav-list" role="list">
+                <li role="listitem"><a href="#home" class="footer-link">Revenir à l'accueil</a></li>
+                <li role="listitem"><a href="#how" class="footer-link">Comment ça marche</a></li>
+                <li role="listitem"><a href="#praticiens" class="footer-link">Praticiens</a></li>
+                <li role="listitem"><a href="#accessibilite" class="footer-link">Accessibilité</a></li>
             </ul>
-        </div>
-        <div class="footer-contact">
-            <h3 class="footer-contact-title">Contact</h3>
-            <ul class="footer-contact-list">
-                <li><span class="footer-contact-icon"><img src="img/phone-orange.png" alt="Logo Ocytosigne" class="nav-logo" /></span> <a href="tel:0123456789">01 23 45 67 89</a></li>
-                <li><span class="footer-contact-icon"><img src="img/mail.png" alt="Logo Ocytosigne" class="nav-logo" /></span> <a href="mailto:contact@ocytosigne.com">contact@ocytosigne.com</a></li>
-                <li><span class="footer-contact-icon"><img src="img/map.png" alt="Logo Ocytosigne" class="nav-logo" /></span> 12 rue de la Santé, 75000 Paris</li>
+        </nav>
+
+        <section class="footer-contact" role="region" aria-labelledby="footer-contact-title">
+            <h3 class="footer-contact-title" id="footer-contact-title">Contact</h3>
+            <ul class="footer-contact-list" role="list">
+                <li role="listitem">
+                    <span class="footer-contact-icon" aria-hidden="true">
+                        <img src="img/phone-orange.png" alt="" aria-hidden="true" class="nav-logo" />
+                    </span>
+                    <a href="tel:0123456789">01 23 45 67 89</a>
+                </li>
+                <li role="listitem">
+                    <span class="footer-contact-icon" aria-hidden="true">
+                        <img src="img/mail.png" alt="" aria-hidden="true" class="nav-logo" />
+                    </span>
+                    <a href="mailto:contact@ocytosigne.com">contact@ocytosigne.com</a>
+                </li>
+                <li role="listitem">
+                    <span class="footer-contact-icon" aria-hidden="true">
+                        <img src="img/map.png" alt="" aria-hidden="true" class="nav-logo" />
+                    </span>
+                    12 rue de la Santé, 75000 Paris
+                </li>
             </ul>
-        </div>
-        <div class="footer-urgency">
-            <h3 class="footer-urgency-title">Urgence médicale</h3>
-            <div class="footer-urgency-desc">Accès prioritaire disponible 24h/24h pour toute urgence médicale.</div>
-            <button class="footer-urgency-btn">Urgence</button>
-        </div>
-        <div class="footer-legal">
+        </section>
+
+        <section class="footer-urgency" role="region" aria-labelledby="footer-urgency-title">
+            <h3 class="footer-urgency-title" id="footer-urgency-title">Urgence médicale</h3>
+            <div class="footer-urgency-desc" id="footer-urgency-desc">Accès prioritaire disponible 24h/24h pour toute urgence médicale.</div>
+            <button class="footer-urgency-btn" aria-describedby="footer-urgency-desc">Urgence</button>
+        </section>
+
+        <div class="footer-legal" aria-label="Mentions légales">
             <span>© 2025 Ocytosigne. Tous droits réservés.</span>
         </div>
     </footer>
+
     <script src="script.js"></script>
     <script src="header.js"></script>
-
 </body>
-
 </html>
