@@ -1,0 +1,308 @@
+/* === HEADER & NAVIGATION === */
+.header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 1001;
+}
+
+li {
+    list-style: none;
+}
+
+.nav {
+    width: 100%;
+}
+
+/* === NAV MOBILE === */
+.nav-mobile {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.nav-logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 30%;
+}
+
+.nav-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.nav-title-top {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c323e;
+    letter-spacing: 0.5px;
+}
+
+.nav-title-bottom {
+    font-size: 0.95rem;
+    color: #8195be;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+/* === LOGIN BUTTON === */
+.nav-login {
+    background: #F97823;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #fff;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    gap: 0.5rem;
+    height: 50px;
+
+}
+
+.nav-login .login-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.nav-login:hover,
+.nav-login:focus {
+    color: #fff;
+    transform: scale(1.07);
+    outline: none;
+}
+
+.nav-login:hover .login-icon,
+.nav-login:focus .login-icon {
+    color: #fff;
+}
+
+/* === Urgence BUTTON === */
+.nav-urg {
+    display: none;
+}
+
+.nav-urg {
+    background: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #000000;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    gap: 0.5rem;
+    border: solid 1px #c4c4c4;
+    height: 50px;
+}
+
+.nav-urg .login-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.nav-urg:hover,
+.nav-urg:focus {
+    color: #fff;
+    transform: scale(1.07);
+    outline: none;
+}
+
+.nav-urg:hover .urg-icon,
+.nav-urg:focus .urg-icon {
+    color: #fff;
+}
+
+
+/* === BURGER BUTTON === */
+.nav-burger {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    transition: background 0.2s;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+.nav-burger:hover,
+.nav-burger:focus {
+    background: #e6f0fa;
+    outline: none;
+}
+
+.burger-bar {
+    width: 18px;
+    height: 3px;
+    background: #2c323e;
+    border-radius: 2px;
+    margin: 2px 0;
+    transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.nav-burger.active .burger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+
+.nav-burger.active .burger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-burger.active .burger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === MENU BURGER MOBILE === */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    background: #2c323e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 0;
+    overflow-y: auto;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(.4, 0, .2, 1), opacity 0.3s;
+    pointer-events: none;
+}
+
+.nav-menu.open {
+    max-height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+    text-decoration: none;
+
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1120px) {
+    .nav-title-top {
+        font-size: 1rem;
+    }
+
+    .nav-left {
+        gap: 1rem;
+    }
+
+    .nav-title-bottom {
+        font-size: 0.85rem;
+    }
+}
+
+/* === DESKTOP VERSION === */
+@media (min-width: 1120px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .nav-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    .nav-burger {
+        display: none !important;
+    }
+
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        display: flex !important;
+        background: none;
+        box-shadow: none;
+        max-height: fit-content;
+        opacity: 1;
+        pointer-events: auto;
+        height: 4vh;
+
+        padding: 0;
+    }
+
+    .nav-link {
+        color: #8195be;
+        font-size: 1rem;
+        padding: 0.5rem 1.2rem;
+        text-decoration: none;
+
+    }
+}
+
+/* Masquer par défaut */
+.nav-urg {
+    display: none;
+}
+
+/* Afficher entre 750px et 1100px */
+@media (min-width: 750px) {
+    .nav-urg {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #F97823;
+        color: #F97823;
+        font-weight: 600;
+        padding: 0.5rem 1.2rem;
+        border-radius: 6px;
+        margin-left: 1rem;
+        gap: 0.5rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, transform 0.15s;
+    }
+
+    .nav-urg .urg-icon img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .nav-urg:hover,
+    .nav-urg:focus {
+        background: #F97823;
+        color: #fff;
+        transform: scale(1.07);
+    }
+}
