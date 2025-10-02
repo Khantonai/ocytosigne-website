@@ -20,10 +20,6 @@ body {
     background-color: #ffffff;
 }
 
-main {
-    padding: 0 1rem;
-}
-
 /* Accessibility */
 .skip-link {
     position: absolute;
@@ -409,6 +405,7 @@ h1 {
 
 #how {
     text-align: center;
+    padding-inline: 1rem;
 }
 
     #how .card-cont {
